@@ -26,8 +26,6 @@ print("Predictions: {}, Actual Values: {}".format(y_pred[:2], y_test[:2]))
 
 # Regression performance
 
-# Import mean_squared_error
-
 # Compute R-squared
 r_squared = reg.score(X_test, y_test)
 
