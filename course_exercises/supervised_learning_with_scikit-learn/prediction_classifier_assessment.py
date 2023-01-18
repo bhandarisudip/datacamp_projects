@@ -4,6 +4,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
+# Instantiate the KNN model
 knn = KNeighborsClassifier(n_neighbors=6)
 
 # Create X and y arrays
