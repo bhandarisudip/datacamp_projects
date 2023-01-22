@@ -1,5 +1,5 @@
 '''
-Build a regression model to predict which sales using sales_df.
+Build a linear regression model to predict sales values using sales_df.
 '''
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
