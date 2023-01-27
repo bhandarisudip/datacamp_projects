@@ -1,6 +1,6 @@
-'''
+"""
 Build a classification model to predict which customers churn using churn_df.
-'''
+"""
 import numpy as np
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
@@ -14,7 +14,8 @@ y = churn_df["churn"].values
 
 # Split into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y)
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
 knn = KNeighborsClassifier(n_neighbors=5)
 
 # Fit the classifier to the training data
@@ -42,7 +43,7 @@ for neighbor in neighbors:
     # Compute accuracy
     train_accuracies[neighbor] = knn.score(X_train, y_train)
     test_accuracies[neighbor] = knn.score(X_test, y_test)
-print(neighbors, '\n', train_accuracies, '\n', test_accuracies)
+print(neighbors, "\n", train_accuracies, "\n", test_accuracies)
 
 
 # Model complexity curve
@@ -50,7 +51,7 @@ print(neighbors, '\n', train_accuracies, '\n', test_accuracies)
 # Add a title
 plt.title("KNN: Varying Number of Neighbors")
 
-# Plot training accuracies
+# Plot training accuracies
 plt.plot(neighbors, train_accuracies.values(), label="Training Accuracy")
 
 # Plot test accuracies

@@ -1,7 +1,7 @@
-'''
+"""
 Build a linear regression model, then use 6-fold cross-validation to assess
 its accuracy for predicting sales using social media advertising expenditure.
-'''
+"""
 
 # Import the necessary modules
 import numpy as np
@@ -9,15 +9,15 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import KFold, cross_val_score
 
 # Create X from the social media column's values
-X = np.array(sales_df['radio'])
+X = np.array(sales_df["radio"])
 
 # Reshape X
 X = X.reshape(-1, 1)
 
 # Create y from the sales column's values
-y = np.array(sales_df['sales'])
+y = np.array(sales_df["sales"])
 
-# Create a KFold object
+#  Create a KFold object
 kf = KFold(n_splits=6, shuffle=True, random_state=5)
 
 reg = LinearRegression()
