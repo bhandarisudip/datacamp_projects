@@ -1,3 +1,8 @@
+"""
+Build a pipeline containing steps to impute missing values using the mean 
+for each feature and build a KNN model for the classification of song genre.
+"""
+
 # Import modules
 import numpy as np
 

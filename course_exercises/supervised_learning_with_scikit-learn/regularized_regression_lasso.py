@@ -1,3 +1,7 @@
+"""
+Fit a lasso regression model to the sales_df data and plot the model's coefficients.
+"""
+
 # Import Lasso
 import matplotlib.pyplot as plt
 from sklearn.linear_model import Lasso

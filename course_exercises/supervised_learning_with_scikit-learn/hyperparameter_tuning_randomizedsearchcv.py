@@ -1,3 +1,8 @@
+"""
+Define a range of hyperparameters and use RandomizedSearchCV to look for 
+optimal hyperparameters from these options.
+"""
+
 # Import GridSearchCV
 import numpy as np
 from sklearn.linear_model import LogisticRegression
@@ -7,13 +12,16 @@ from sklearn.model_selection import KFold, RandomizedSearchCV, train_test_split
 X = diabetes_df.drop("glucose", axis=1).values
 y = diabetes_df["glucose"].values
 
+
+# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42
 )
 
+# Instantiate a KFold cross validation object
 kf = KFold(n_splits=5, shuffle=True, random_state=42)
 
-#  Create the parameter space
+# Create the parameter space
 params = {
     "penalty": ["l1", "l2"],
     "tol": np.linspace(0.0001, 1.0, 50),
@@ -21,6 +29,7 @@ params = {
     "class_weight": ["balanced", {0: 0.8, 1: 0.2}],
 }
 
+# Instantiate the LogisticRegression object
 logreg = LogisticRegression()
 
 # Instantiate the RandomizedSearchCV object

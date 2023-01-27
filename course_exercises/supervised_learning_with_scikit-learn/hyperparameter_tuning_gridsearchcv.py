@@ -1,4 +1,9 @@
-# Import GridSearchCV
+"""
+Build a lasso regression model with optimal hyperparameters to predict 
+blood glucose levels using the features in the diabetes_df dataset.
+"""
+
+# Import the necessary modules
 import numpy as np
 from sklearn.linear_model import Lasso
 from sklearn.model_selection import KFold, GridSearchCV, train_test_split
@@ -7,10 +12,12 @@ from sklearn.model_selection import KFold, GridSearchCV, train_test_split
 X = diabetes_df.drop("glucose", axis=1).values
 y = diabetes_df["glucose"].values
 
+# Train-test split of features and target variable
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42
 )
 
+# Instantiate a KFold cross validation object
 kf = KFold(n_splits=5, shuffle=True, random_state=42)
 
 #  Set up the parameter grid

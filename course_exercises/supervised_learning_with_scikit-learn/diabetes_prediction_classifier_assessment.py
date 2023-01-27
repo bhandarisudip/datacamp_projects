@@ -1,3 +1,8 @@
+"""
+Predict whether or not each individual is likely to have diabetes based 
+on the features body mass index (BMI) and age (in years).
+"""
+
 #  Import confusion matrix
 import numpy as np
 from sklearn.metrics import confusion_matrix, classification_report
@@ -8,9 +13,12 @@ from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors=6)
 
 # Create X and y arrays
-X = np.array(diabetes_df["diabetes"])
+X = np.array(
+    diabetes_df["diabetes"]
+)  # 0 indicates no diabetes, 1 indicate individual has diabetes
 y = np.array(diabetes_df[["bmi", "age"]])
 
+# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42
 )

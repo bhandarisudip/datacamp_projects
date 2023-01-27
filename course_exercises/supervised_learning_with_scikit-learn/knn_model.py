@@ -1,5 +1,6 @@
 """
-Build a classification model to predict which customers churn using churn_df.
+Build a classification model to predict which customers churn using churn_df 
+using the k-nearest neighbor (KNN) model.
 """
 import numpy as np
 from sklearn.model_selection import train_test_split

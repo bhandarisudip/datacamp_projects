@@ -28,7 +28,7 @@ cv_scores = cross_val_score(reg, X, y, cv=kf)
 # Print scores
 print(cv_scores)
 
-# Analyzing cross-validation metrics
+# Analyze cross-validation metrics
 
 # Print the mean
 print(np.mean(cv_scores))
