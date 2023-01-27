@@ -1,6 +1,6 @@
-'''
+"""
 Build a linear regression model to predict sales values using sales_df.
-'''
+"""
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
@@ -12,7 +12,8 @@ X = sales_df.drop("sales", axis=1).values
 y = sales_df["sales"].values
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=42)
+    X, y, test_size=0.3, random_state=42
+)
 
 # Instantiate the model
 reg = LinearRegression()
