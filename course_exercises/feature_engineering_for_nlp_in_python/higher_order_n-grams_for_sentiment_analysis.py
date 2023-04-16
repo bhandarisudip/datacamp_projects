@@ -1,6 +1,11 @@
 '''
-Similar to a previous exercise, we are going to build a classifier that can detect if the review of a particular movie is positive or negative. However, this time, we will use n-grams up to n=2 for the task.
-The n-gram training reviews are available as X_train_ng. The corresponding test reviews are available as X_test_ng. Finally, use y_train and y_test to access the training and test sentiment classes respectively.
+Similar to a previous exercise, we are going to build a classifier 
+that can detect if the review of a particular movie is positive or 
+negative. However, this time, we will use n-grams up to n=2 for the task.
+The n-gram training reviews are available as X_train_ng. 
+
+The corresponding test reviews are available as X_test_ng. Finally, use y_train 
+and y_test to access the training and test sentiment classes respectively.
 '''
 
 # Define an instance of MultinomialNB
