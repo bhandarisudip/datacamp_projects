@@ -42,3 +42,4 @@ from sklearn.preprocessing import StandardScaler
 
 # Loading and examining the dataset
 penguins_df = pd.read_csv("penguins.csv")
+penguins_df.head()
