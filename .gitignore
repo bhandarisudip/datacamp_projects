@@ -5,3 +5,8 @@
 # Datasets
 projects/streamlining_employee_data/datasets/
 projects/predictive_modeling_for_agriculture/soil_measures.csv
+fake_or_real_news.csv
+.vscode/ipython
+course_exercises/.DS_Store
+course_projects/.DS_Store
+
